@@ -62,6 +62,8 @@ fun SmsView(){
                 intent.putExtra("sms-body", message)
                 context.startActivity(intent)
             }
-        ) { }
+        ) {
+            Text("Send")
+        }
     }
 }

@@ -18,9 +18,7 @@ fun BottonNav(
     routes: List<Routes>
 ){
     BottomAppBar(){
-        NavigationBar(
-            containerColor = Color.White
-        ) {
+        NavigationBar() {
             val currentRoute = CurrentRoute(navHostController)
 
             routes.forEach{ item ->
@@ -28,7 +26,7 @@ fun BottonNav(
                     selected = currentRoute == item.route,
                     onClick = { navHostController.navigate(item.route)},
                     icon = {
-                        Icon(imageVector = item.icon, contentDescription = item.title, tint = Color.Blue )
+                        Icon(imageVector = item.icon, contentDescription = item.title )
                     },
                     label = {
                         Text(text = item.title)
